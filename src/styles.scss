@@ -1,1 +1,16 @@
-/* You can add global styles to this file, and also import other style files */
+@import "primeng/resources/themes/lara-light-blue/theme.css";
+@import "/node_modules/primeflex/primeflex.css";
+@import "/node_modules/primeflex/themes/primeone-light.css";
+
+@import "primeng/resources/primeng.css";
+@import "primeicons/primeicons.css";
+
+
+body {
+    font-family: 'Comfortaa', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+             

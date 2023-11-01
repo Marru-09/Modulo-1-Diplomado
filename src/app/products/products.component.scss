@@ -1,0 +1,164 @@
+.content-product{
+ display: flex;
+ gap: 10px;
+ flex-wrap: wrap;
+ justify-content: center;
+ margin: 10px;
+}
+
+.card-product {
+    border: 1px solid #263354;
+    border-radius: 15px;
+    background: white;
+    height: 470px;
+    width: 300px;
+    color: #263354;
+}
+.image-product {
+    padding: 25px;
+    height: 288px;
+    width: 297px;
+    overflow: hidden;
+    img {
+        height: auto;
+        max-width: 100%;
+        border-radius: 15px;
+    }
+}
+
+.image-table {
+    height: 50px;
+    width: 50px;
+    overflow: hidden;
+    img {
+        height: auto;
+        max-width: 100%;
+        border-radius: 10px;
+    }
+}
+
+.product {
+    margin: 15px 15px 0 15px;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.description {
+    margin: 5px 15px;
+    font-weight: 400;
+}
+
+.info-product {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 15px;
+}
+
+.price {
+    margin: 0;
+    font-size: 22px;
+    font-weight: 700;
+    color: #56b3ce;
+}
+
+.count {
+    margin: 0;
+    font-weight: 700;
+
+}
+.content-action {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.notify-section {
+    position: fixed;
+    z-index: 1;
+    top: 100px;
+    right: 50px;
+}
+.badge {
+    position: absolute;
+    z-index: 1;
+    top: 2px;
+    right: 2px;
+}
+
+.content-button {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    gap: 10px;
+}
+
+.total {
+    color: #56b3ce;
+    font-weight: 600px;
+}
+::ng-deep {
+ .buy {
+    .p-button {
+        font-family: 'Comfortaa', sans-serif;
+        background: #263354;
+        padding: 15px 12px;
+        border-radius: 15px;
+        border: none;
+        color: white;
+        :hover{
+            color: #56b3ce;
+        }
+    }
+ }
+ .notify-section {
+    .p-button {
+        font-family: 'Comfortaa', sans-serif;
+        background: #263354;
+        padding: 16px 20px;
+        border-radius: 15px;
+        border: none;
+        color: white;
+        :hover{
+            color: #56b3ce;
+        }
+    }
+    .p-badge {
+        font-family: 'Comfortaa', sans-serif;
+        font-weight: 600;
+        background: #52ffdf;
+        border: none;
+        color: rgb(1, 146, 109);
+    }
+ }
+ .input { 
+    .p-inputnumber-buttons-stacked .p-inputnumber-input {
+        max-width: 3rem !important;
+        border: none;
+        background: none;
+    }
+    .p-inputnumber {
+        border: 1.5px solid #263354;
+        border-radius: 15px;
+    }
+    .p-button {
+        background: none;
+        border: none;
+        color: #263354;
+        :hover {
+            color: #56b3ce;
+        }
+    }
+}
+.add {
+    .p-button {
+        height: 48px;
+        border-radius: 15px;
+        color: white;
+        background-color: #263354;
+        border: none;
+    }
+}
+}

@@ -1,0 +1,63 @@
+<section class="content-product">
+<div class="card-product" *ngFor="let producto of productos ; let i = index">
+<div class="image-product"> <img  src="{{ producto.image }}"/></div>
+<h4 class="product">{{ producto.title | slice:0:20 }}</h4>
+<p class="description">{{ producto.description| slice:0:50  }}</p>
+<div class="info-product">
+<h5 class="price"> $ {{ producto.price }}</h5>
+<p class="count">{{ producto.rating.count }} UND</p>
+</div>
+<div class="content-action">
+    <p-button class="buy" label="COMPRAR" ></p-button>
+    <p-inputNumber class="input"
+    [showButtons]="true"
+    [(ngModel)]="producto.cantidad2"
+    placeholder="0"
+    
+  >
+  </p-inputNumber>
+  <p-button class="add"
+        icon="pi pi-cart-plus"
+        (click)="chageCart(producto.cantidad2,producto)"
+      ></p-button>
+
+</div>
+</div>
+</section>
+<div class="notify-section">
+    <p-badge class="badge" *ngIf="cart.length" [value]="cart.length.toString()"></p-badge>
+    <p-button (click)="showDialog()" label="CART" [disabled]="!cart.length">
+    </p-button>
+</div>
+<p-dialog header="CARRITO DE COMPRAS" [(visible)]="visibleCart" [style]="{width: '50vw'}">
+
+    <p-table [value]="cart" responsiveLayout="scroll" [paginator]="true" [rows]="5" [responsive]="true">
+        <ng-template pTemplate="header">
+            <tr>
+                <th>Producto</th>
+                <th>Imagen</th>
+                <th>Cantidad Seleccionada</th>
+                <th>Valor Unitario</th>
+                <th>Valor Total</th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-producto>
+            <tr>
+                <td>{{ producto.title | slice:0:20 }}</td>
+                <td><div class="image-table"><img  [src]="producto.image"/></div></td>
+                <td>{{ producto.cantidad }}</td>
+                <td>${{ producto.price }}</td>
+                <td>${{ producto.price * producto.cantidad }}</td>
+            </tr>
+
+        </ng-template>
+    </p-table>
+    <div class="content-button">
+        <p>
+            VALOR TOTAL :
+        </p>
+        <p class="total">{{this.total}}</p>
+        <p-button class="buy" label="COMPRAR AHORA" (onClick)="showStore()" [disabled]="!cart.length"
+        ></p-button>
+    </div>
+</p-dialog>

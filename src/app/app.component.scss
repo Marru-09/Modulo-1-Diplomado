@@ -1,0 +1,55 @@
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+.banner {
+  background-size: cover;
+  background-position: center;
+  height: auto;
+  text-align: center;
+  color: #fff;
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+.productos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px;
+}
+.producto {
+  width: 30%;
+  border: 1px solid #ccc;
+  margin: 10px;
+  padding: 10px;
+  text-align: center;
+}
+footer {
+  background-color: #193054;
+  color: #56b3ce;
+  text-align: center;
+  padding: 10px;
+}
+
+::ng-deep {
+  p-menubar {
+    border: none !important;
+    color: #56b3ce;
+  }
+  .p-menubar
+    .p-menubar-root-list
+    > .p-menuitem
+    > .p-menuitem-content
+    .p-menuitem-link
+    .p-menuitem-text {
+    color: #193054;
+    :hover {
+        color: #56B3CE;
+    }
+  }
+}
